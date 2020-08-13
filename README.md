@@ -1,4 +1,4 @@
-# admin
+# wyyMusic
 
 ## Project setup
 ```
