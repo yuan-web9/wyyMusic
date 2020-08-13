@@ -1,0 +1,208 @@
+.icons-pic{
+    width: 20px;
+    display: inline-block;
+}
+
+.login-dialog .el-dialog{
+    max-width: 600px;
+}
+.login-dialog .login-change{
+    text-align: right;
+    color: #409eff;
+    cursor: pointer;
+}
+
+.main-header {
+    background-color: #242424;
+    color: #fff;
+    min-width: 1200px;
+    padding: 0;
+
+    .container {
+        position: relative;
+        height: 100%;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 60px;
+        line-height: 60px;
+        margin: 0 20px;
+        width: 150px;
+    }
+
+    .menu-nav>ul {
+        height: 60px;
+        line-height: 60px;
+        list-style: none;
+        width: 550px;
+
+        .menu-nav-item {
+            border: none;
+            color: #ccc;
+            width: 100px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .active {
+            background-color: #000000;
+            color: #fff;
+        }
+        // 添加小三角图标
+        .active::after{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-bottom: 10px solid #c20c0c;
+            bottom: 0;
+            left: calc(~'50% - 10px');
+
+        }
+    }
+
+    // 搜索框部分
+    .search-box {
+        height: 60px;
+        line-height: 60px;
+        width: 400px;
+        .search-input{
+            border-radius: 30px;
+            height: 30px;
+            line-height: 30px;
+            outline: none;
+            width: 240px;
+            padding: 0 20px;
+            margin: 0 10px;
+        }
+    }
+
+    // 登录-头像部分
+    .login-box{
+        height: 60px;
+        line-height: 60px;
+        .login-avatar{
+            text-align: center;
+            height: 60px;
+            .avatar-pic{
+                text-align: center;
+                margin: 15px;
+            }
+        }
+        .login-link{
+            cursor: pointer;
+        }
+    }
+
+    // 子导航部分
+    .child-nav{
+        background-color: #c20c0c;
+        width: 100%;
+        position: relative;
+        padding: 5px 0;
+        .child-nav-list{
+            &>li{
+                float: left;
+                margin: 0 15px;
+                padding: 0 15px;
+                text-align: center;
+                // border: 1px solid blue;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            &>li.active{
+                background-color: #9b0909;
+            }
+            &>li:first-of-type{
+                margin-left: 210px;
+            }
+        }
+
+    }
+}
+
+.el-main{
+    margin-top: 30px;
+    padding: 0;
+    overflow: unset;
+}
+
+// 底部播放控件
+.music-player{
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: rgba(0, 0, 0, .8);
+    color: #989898;
+}
+.music-player .player-content .control-box{
+    // background-color: skyblue;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 10px;
+    
+    &>.song-pause{
+        margin: 0 10px;
+    }
+    &>.song-change,&>.song-pause{
+        cursor: pointer;
+        font-size: 16px;
+        margin: 22px 10px;
+    }
+    &>.song-change:hover,&>.song-pause:hover{
+        color:#fff
+    }
+}
+.music-player .player-content .msg-box{
+    .pic-box{
+        width: 40px;
+        margin: 10px 0;
+    }
+    .slide-box{
+        width: 500px;
+        padding:0 20px;
+        // background-color: pink;
+        height: 60px;
+        // margin-left: 10px;
+
+        .name-singer{
+            height: 14px;
+            line-height: 14px;
+            // margin: 3px 0;
+            margin-top: 6px;
+        }
+        .name-singer>span{
+            font-size: 14px;
+            margin-right: 18px;
+        }
+
+        .slide .el-slider__bar{
+            background-color: #c70c0c;
+            
+        }
+        .el-slider__button{
+            border-color:#c70c0c;
+        }
+        .slide .el-slider__runway{
+            background-color: #1b1b1b;
+            border-radius: 10px;
+
+        }
+    }
+
+    .timeout{
+        height: 60px;
+        line-height: 75px;
+        color:#fff;
+        margin: 0 15px;
+    }
+}

@@ -1,0 +1,251 @@
+// 底部播放控件
+
+.music-player {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #989898;
+}
+
+.music-player .player-content .control-box {
+  // background-color: skyblue;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 10px;
+
+  &>.song-pause {
+    margin: 0 10px;
+  }
+
+  &>.song-change,
+  &>.song-pause {
+    cursor: pointer;
+    font-size: 16px;
+    margin: 22px 10px;
+  }
+
+  &>.song-change:hover,
+  &>.song-pause:hover {
+    color: #fff;
+  }
+}
+
+.music-player .player-content .msg-box {
+  .pic-box {
+    width: 40px;
+    margin: 10px 0;
+  }
+
+  .slide-box {
+    width: 500px;
+    padding: 0 20px;
+    // background-color: pink;
+    height: 60px;
+    // margin-left: 10px;
+
+    .name-singer {
+      height: 14px;
+      line-height: 14px;
+      // margin: 3px 0;
+      margin-top: 6px;
+    }
+
+    .name-singer>span {
+      font-size: 14px;
+      margin-right: 18px;
+    }
+
+    /deep/ .slide-control .slide .el-slider .el-slider__runway .el-slider__bar {
+      background-color: #c70c0c;
+    }
+
+    /deep/ .el-slider__button {
+      border-color: #c70c0c;
+    }
+
+    /deep/ .slide .el-slider__runway {
+      background-color: #1b1b1b;
+      border-radius: 10px;
+    }
+  }
+
+  .timeout {
+    height: 60px;
+    line-height: 75px;
+    color: #fff;
+    margin: 0 15px;
+  }
+}
+
+.music-player .player-content .other {
+  .userShare {
+    padding: 0 10px;
+  }
+
+  .userShare .music-play-icon {
+    height: 60px;
+    line-height: 60px;
+    padding: 20px 0;
+    margin: 0 4px;
+  }
+
+  .music-player-set .volume-slider {
+    position: fixed;
+    bottom: 60px;
+    background-color: #252526;
+    padding: 20px 0;
+    transform: translateX(-8px);
+    z-index: 100;
+
+    /deep/ .el-slider__bar {
+      background-color: #c70c0c;
+    }
+
+    /deep/ .el-slider__button {
+      border-color: #c70c0c;
+    }
+  }
+
+  .music-player-set .music-play-icon {
+    margin: 0 4px;
+    height: 60px;
+    line-height: 60px;
+    padding: 20px 0;
+  }
+}
+
+// 播放列表样式
+.play-list-btn {
+  height: 60px;
+  line-height: 60px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: #c4c4c4;
+}
+
+.play-list {
+  position: relative;
+  top: -400px;
+  height: 297px;
+  margin: 0 auto;
+  width: 1000px;
+  // overflow: hidden;
+  // left: 400px;
+  // margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .music-list {
+    float: left;
+    width: 50%;
+    height: 297px;
+    box-sizing: border-box;
+    border-right: 1px solid #000;
+
+    .music-list-title {
+      box-sizing: border-box;
+      // position: fixed;
+      color: #fff;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+      border-bottom: 1px solid #000;
+
+      &>.music-list-title-btn {
+        float: right;
+
+        &>span {
+          margin-left: 15px;
+          cursor: pointer;
+          color:#9b9b9b;
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+    }
+
+
+
+    .music-list-content {
+      padding: 0 10px;
+      height: 267px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        // height: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 4px;
+        // height: auto;
+        border-radius: 4px;
+        background-color: #444;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 1);
+      }
+    }
+  }
+
+  .lyr-list {
+    box-sizing: border-box;
+    width: 50%;
+    height: 297px;
+    float: left;
+
+
+    .lyr-list-title {
+      box-sizing: border-box;
+      // position: fixed;
+      color: #fff;
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+      border-bottom: 1px solid #000;
+      text-align: center;
+    }
+
+    .lyr-list-content {
+      padding: 0 10px;
+      height: 267px;
+      overflow-y: auto;
+      text-align: center;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        // height: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 4px;
+        // height: auto;
+        border-radius: 4px;
+        background-color: #444;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 1);
+      }
+
+      .lyr-card {
+        height: 30px;
+        line-height: 30px;
+
+        &.active {
+          color: #fff;
+        }
+      }
+
+    }
+  }
+}
